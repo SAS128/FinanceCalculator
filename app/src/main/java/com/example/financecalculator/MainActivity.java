@@ -38,8 +38,10 @@ public class MainActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.btn_add)).setOnClickListener(new TextView.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), ((EditText) findViewById(R.id.editTextNumber)).getText(), Toast.LENGTH_LONG).show();
-                fruits.add("ASD");
+                //Toast.makeText(getApplicationContext(), ((EditText) findViewById(R.id.editTextNumber)).getText(), Toast.LENGTH_LONG).show();
+                fruits.add(String.valueOf(((EditText) findViewById(R.id.editTextNumber)).getText()) + String.valueOf(((EditText) findViewById(R.id.editTextNumber2)).getText()));
+                ((EditText) findViewById(R.id.editTextNumber)).setText("");
+                fruitsList.setAdapter(adapter);
             }
 
 
